@@ -11,6 +11,10 @@
     <form action="/admin/edit" th:method="get">
         <table th:border="1" th:cellpadding="5">
             <tr>
+                <td>ID:</td>
+                <td><input type="text" th:field="*{user.id}" readonly/></td>
+            </tr>
+            <tr>
                 <td>Name:</td>
                 <td><input type="text" th:field="*{user.username}"/></td>
             </tr>
@@ -22,7 +26,7 @@
                 <td>Password:</td>
                 <td><input type="text" th:field="*{user.password}"/></td>
             </tr>
-            <input type="checkbox" name="nameRoles" value="ROLE_USER"/>USER
+            <input type="checkbox" name="nameRoles" value="ROLE_USER"required>USER
             <input type="checkbox" name="nameRoles" value="ROLE_ADMIN"/>ADMIN
             <br/>
         </table>

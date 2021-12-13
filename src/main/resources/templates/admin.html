@@ -16,13 +16,15 @@
             <th>ID</th>
             <th>NAME</th>
             <th>EMAIL</th>
+            <th>ROLE</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
         <tr th:each="user : ${allUsers}">
-            <td th:text="${user.id}">ID</td>
-            <td th:text="${user.username}">NAME</td>
-            <td th:text="${user.email}">EMAIL</td>
+            <td th:text="${user.getId()}">ID</td>
+            <td th:text="${user.getUsername()}">NAME</td>
+            <td th:text="${user.getEmail()}">EMAIL</td>
+            <td th:text="${user.getRoles()}"></td>
             <td><form th:method="GET" th:action="@{admin/edit/{id}(id=${user.id})}">
                 <input type="submit" value="Edit"/>
             </form>

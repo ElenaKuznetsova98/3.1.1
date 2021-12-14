@@ -26,8 +26,11 @@
                 <td>Password:</td>
                 <td><input type="text" th:field="*{user.password}"/></td>
             </tr>
-            <input type="checkbox" name="nameRoles" value="ROLE_USER"required>USER
-            <input type="checkbox" name="nameRoles" value="ROLE_ADMIN"/>ADMIN
+            <select name="nameRoles" required>
+                <option value="">Please select</option>
+                <option value="ROLE_ADMIN">ADMIN</option>
+                <option value="ROLE_USER">USER</option>
+            </select>
             <br/>
         </table>
         <br/>
